@@ -1,0 +1,3 @@
+output "content_output" {
+	value = local_file.hello.out
+}
