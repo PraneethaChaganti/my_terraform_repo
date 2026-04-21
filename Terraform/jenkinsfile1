@@ -18,6 +18,14 @@ pipeline{
             sh 'terraform apply -auto-approve'
             sh 'pwd'
         }
+      stage('terraform validate'){
+        steps {
+            sh 'terraform validate'
+        }
+      stage('terraform output'){
+        steps {
+            sh 'terraform output'
+        }
       }
     }
 }
