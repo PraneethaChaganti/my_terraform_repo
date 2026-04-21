@@ -17,6 +17,7 @@ pipeline{
             sh 'terraform apply -auto-approve'
             sh 'pwd'
         }
+       }
       stage('terraform validate'){
         steps {
             sh 'terraform validate'
