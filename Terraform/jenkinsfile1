@@ -4,7 +4,7 @@ pipeline{
     stages{
       stage('terraform init'){
         steps {
-            sh 'cd /var/jenkins_home/workspace/Jenkins_Github_Pipeline'
+            sh 'cd /var/jenkins_home/workspace/Jenkins_Github_Pipeline/Terraform'
             sh 'terraform init'
         }
       }
