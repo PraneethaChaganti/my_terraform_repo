@@ -2,15 +2,15 @@ pipeline{
   agent any
 
     stages{
-      stage('terraform init'){
+      stage('terraform steps'){
         steps {
-            sh 'cd /var/jenkins_home/workspace/Jenkins_Github_Pipeline/Terraform'
-            sh 'terraform init'
-            sh 'terraform plan'
-            sh 'terraform apply -auto-approve'
-            sh 'terraform output'
+            dir('cd /var/jenkins_home/workspace/Jenkins_Github_Pipeline/Terraform'){
+                sh 'terraform init'
+                sh 'terraform plan'
+                sh 'terraform apply -auto-approve'
+                sh 'terraform output'
+            }
         }
       }
     }
 }
-     
