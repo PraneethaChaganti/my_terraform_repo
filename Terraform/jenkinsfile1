@@ -4,7 +4,7 @@ pipeline{
     stages{
       stage('terraform steps'){
         steps {
-            dir('cd Terraform'){
+            dir(' cd Terraform'){
                 sh 'terraform init'
                 sh 'terraform plan'
                 sh 'terraform apply -auto-approve'
