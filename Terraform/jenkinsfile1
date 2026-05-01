@@ -5,7 +5,7 @@ pipeline{
       stage('terraform steps'){
         steps {
             sh '''
-              cd Terraform
+              cd /var/jenkins_home/workspace/Jenkins_Github_Pipeline/Terraform
               terraform init
               terraform plan
               terraform apply -auto-approve
